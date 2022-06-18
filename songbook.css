@@ -1,0 +1,189 @@
+body {
+  font-family: sans-serif;
+}
+@media only screen and (min-width: 950px) {
+  .column {
+    width: 80%;
+    max-width: 1024px;
+    margin: auto;
+  }
+  .page {
+    border: lightgray solid 2px;
+    box-shadow: 0 0 5px #ddd;
+    padding: 1em;
+  }
+}
+
+.song-image {
+  max-width: 100%;
+  max-height: 400px;
+  display: block;
+  margin: auto;
+}
+
+#control-bar-toggle-label {
+  line-height: 0;
+  display: block;
+  align-items:center;
+  justify-content:center;
+  height: 100%;
+}
+
+.clear {
+  clear: both;
+}
+
+#control-icon {
+  height: 1.5em;
+}
+
+#control-bar-toggle-label {
+  height: 2em;
+  float: right;
+
+  background lightgray;
+  padding: 0 .25em;
+  box-shadow: 0 0 2px 0 rgba(0,0,0,.8);
+  border: solid 1px gray;
+  border-radius: 3px;
+
+  display: flex;
+}
+
+#control-bar-toggle:checked~#control-bar-toggle-label {
+  box-shadow: 0 0 2px 0 rgba(0,0,0,.8) inset;
+}
+
+#control-bar {
+  padding: .2em;
+  border: solid lightgray 1px;
+  box-shadow: 0 0 5px #ccc;
+  min-height: calc( 100% - .4em );
+  margin: auto;
+  display: none;
+  align-items:center;
+  justify-content:center;
+  margin: 0 5%;
+}
+
+#control-bar-toggle:checked~label~#control-bar {
+  display: flex;
+}
+
+#controls {
+  text-align: center;
+}
+
+.control-group {
+  display: inline-block;
+  padding: .2em .5em;
+}
+
+
+.page {
+  padding: 1em;
+}
+
+h1 {
+  margin: 0 0 .25em 0;
+}
+h1>span.song-number {
+  font-size: 65%;
+}
+@media only screen and (max-width: 736px) {
+  h1>span.song-number {
+    display: block;
+  }
+}
+
+.bar {
+  display: inline-block;
+  position: relative;
+  border-bottom: 1px solid black;
+  width: 100%;
+}
+.strech > .bar {
+  width: max(0px, calc(min(100% - 4px, 0px) * 99999 + 100%))
+}
+.chorus .bar {
+  border-bottom: 2px solid black;
+}
+
+.width {
+  text-indent: 0;
+  display: inline-block;
+}
+
+.lyrics {
+  font-family: "Ubuntu Mono", monospace;
+  font-size: 14pt;
+}
+.stanza {
+  padding-top: 1em;
+}
+.lyrics-line {
+  text-indent: -2em;
+  padding-left: 2em;
+  margin-top: .15em;
+  line-height: .97;
+}
+.lyrics-word {
+  white-space: nowrap;
+}
+.lyrics-chunk {
+  text-indent: 0;
+  display: inline-flex;
+  flex-direction: column;
+  vertical-align: bottom;
+  padding-top: .15em;
+}
+
+.lyrics-under-chords {
+  display: inline-flex;
+  flex-direction: row;
+}
+.strech {
+  flex-grow: 10;
+}
+
+.chord {
+  font-weight: 700;
+  background: lightgray;
+  padding: 0 .25ch;
+  margin: 0 .5ch 0 -.25ch;
+  border-radius: .4ch;
+}
+.chorus {
+  font-weight: 700;
+}
+.bracket {
+  font-size: 0;
+}
+dl {
+  display: flex;
+  flex-flow: row wrap;
+}
+dt {
+  font-weight: bold;
+  flex-basis: 20%;
+  text-align: right;
+}
+@media only screen and (min-width: 768px) {
+  #glossary-header {
+    float: left;
+  }
+  dl {
+    padding-top: 4px;
+  }
+  dt {
+    flex-basis: 15%;
+  }
+}
+dt::after {
+  content: ":";
+}
+dd {
+  flex-basis: 70%;
+  flex-grow: 1;
+  margin-left: 5px;
+}
