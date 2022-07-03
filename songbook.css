@@ -187,3 +187,6 @@ dd {
   flex-grow: 1;
   margin-left: 5px;
 }
+#roud-number {
+  font-style: italic;
+}
